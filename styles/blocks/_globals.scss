@@ -1,0 +1,41 @@
+/*----------------------------------global--------------------------------*/
+body.lock {
+    overflow: hidden;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.main {
+    flex: 1 1 auto;
+}
+._container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding-x);
+}
+._ibg {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+.title {
+    @include fluid-text(64, 22);
+    line-height: 100%;
+    color: var(--color-red);
+}
+.subtitle {
+    @include fluid-text(32, 18);
+    line-height: 100%;
+    color: var(--color-white);
+}
+
+/*----------------------------------global--------------------------------*/

@@ -1,0 +1,22 @@
+/*----------------------------------header--------------------------------*/
+.header {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0px;
+    }
+    &__logo {
+        z-index: 3; 
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/*----------------------------------header--------------------------------*/

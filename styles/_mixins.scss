@@ -1,0 +1,24 @@
+@mixin fluid-text($min: 14, $max: 24) {
+    font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+}
+
+@mixin content-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin desktop {
+    @media(max-width: $desktop) {
+        @content;
+    }
+}
+@mixin table {
+    @media(max-width: $table) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}

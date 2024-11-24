@@ -1,0 +1,54 @@
+/*----------------------------------burger--------------------------------*/
+.burger__wrapper {
+    display: none;
+    @include mobile {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        position: relative;
+        display: block;
+        z-index: 9;
+        .burger {
+            z-index: 2;
+            cursor: pointer;
+            &__line {
+                height: 5px;
+                width: 27px;
+                position: absolute;
+                transition: all 0.3s ease 0s;
+                background: #000;
+                transform: translate(-50%, -50%);
+                border-radius: 1px;
+                &:first-child {
+                    left: 50%;
+                    top: 25%;
+                }
+                &:nth-child(2) {
+                    left: 50%;
+                    top: 50%;
+                }
+                &:last-child {
+                    left: 50%;
+                    top: 75%;
+                }
+            }
+            
+        }
+        &._active .burger__line:nth-child(2){
+            opacity: 0;
+        }
+        &._active .burger__line:first-child{
+            transform: rotate(-45deg);
+            left: 30%;
+            top: 50%;
+        }
+        &._active .burger__line:last-child{
+            transform: rotate(45deg);
+            left: 30%;
+            top: 50%;
+        }
+    }
+}
+
+/*----------------------------------burger--------------------------------*/

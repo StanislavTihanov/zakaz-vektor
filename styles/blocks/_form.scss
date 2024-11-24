@@ -1,0 +1,76 @@
+/*----------------------------------form--------------------------------*/
+.form {
+    max-width: 708px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    background: var(--color-white);
+    padding: 34px 49px;
+    @include mobile {
+        padding: 20px 10px;
+    }
+    &__input {
+        border-radius: 10px;
+        background: rgb(236, 236, 236);
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 15px 22px;
+        color: var(--color-black);
+    }
+    &__input::placeholder {
+        color: var(--color-black);
+        font-size: clamp(14px, 0.8vw, 16px);
+    }
+    &__input_textarea {
+        resize: none;
+        height: 140px;
+    }
+    &__button {
+        display: block;
+        margin-bottom: 25px;
+        margin-left: auto;
+        border-radius: 10px;
+        background: var(--color-black);
+        color: var(--color-red);
+        padding: 10px 62px;
+        cursor: pointer;
+    }
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+    }
+    &__checkbox_custom {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: var(--color-white);
+        border: 2px solid #e0e5ea;
+        border-radius: 5px;
+        vertical-align: sub;
+        margin-right: 5px;
+        flex: none;
+        &::before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 0.2s ease-in;
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: url(../images/check.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    
+}
+.form__checkbox:checked + .form__checkbox_custom::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*----------------------------------form--------------------------------*/
