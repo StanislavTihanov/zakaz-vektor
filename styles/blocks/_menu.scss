@@ -12,7 +12,7 @@
         text-transform: uppercase;
         position: relative;
         @include fluid-text(12, 14);
-        &:hover {
+        @include hover {
             color: var(--color-blue);
         }
     }

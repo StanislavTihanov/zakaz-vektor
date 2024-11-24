@@ -210,6 +210,11 @@ body.lock {
   flex-wrap: wrap;
   gap: 10px;
 }
+@media (hover: hover) {
+  .header__link:hover {
+    color: var(--color-blue);
+  }
+}
 
 /*----------------------------------header--------------------------------*/
 /*----------------------------------menu--------------------------------*/
@@ -226,8 +231,10 @@ body.lock {
   position: relative;
   font-size: clamp(12px, 0.7291666667vw, 14px);
 }
-.menu__link:hover {
-  color: var(--color-blue);
+@media (hover: hover) {
+  .menu__link:hover {
+    color: var(--color-blue);
+  }
 }
 @media (max-width: 770px) {
   .menu {

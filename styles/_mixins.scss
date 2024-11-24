@@ -7,18 +7,3 @@
     justify-content: space-between;
     align-items: center;
 }
-@mixin desktop {
-    @media(max-width: $desktop) {
-        @content;
-    }
-}
-@mixin table {
-    @media(max-width: $table) {
-        @content;
-    }
-}
-@mixin mobile {
-    @media(max-width: $mobile) {
-        @content;
-    }
-}

@@ -5,4 +5,28 @@ $table-above: 1024px;
 $table: 1023px;
 
 $mobile-above: 771px;
-$mobile: 770px
+$mobile: 770px;
+
+@mixin desktop {
+    @media(max-width: $desktop) {
+        @content;
+    }
+}
+@mixin table {
+    @media(max-width: $table) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+      &:hover {
+        @content;
+      }
+    }
+  }
