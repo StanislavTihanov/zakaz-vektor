@@ -2,6 +2,13 @@
 body.lock {
     overflow: hidden;
 }
+body { 
+    font-family: var(--font-family-base); 
+    font-size: 14px;
+    font-weight: 400; 
+    color: var(--color-black); 
+    background: var(--color-white);
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -28,12 +35,12 @@ body.lock {
     }
 }
 .title {
-    @include fluid-text(64, 22);
+    @include fluid-text(30, 60);
     line-height: 100%;
     color: var(--color-red);
 }
 .subtitle {
-    @include fluid-text(32, 18);
+    @include fluid-text(18, 32);
     line-height: 100%;
     color: var(--color-white);
 }
