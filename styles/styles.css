@@ -120,7 +120,7 @@ address {
   --border-radius-small: 5px;
   --shadow: 0px 0px 20px 0px var(--color-black);
   --font-family-base: "Montserrat", sans-serif;
-  --container-width: 1240px;
+  --container-width: 1460px;
   --container-padding-x: 10px;
   --section-padding-y: 50px;
 }
@@ -152,7 +152,7 @@ body {
 ._container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 var(--container-padding-x);
+  padding: 0px var(--container-padding-x);
 }
 
 ._ibg {
