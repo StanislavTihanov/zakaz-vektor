@@ -120,9 +120,9 @@ address {
   --border-radius-small: 5px;
   --shadow: 0px 0px 20px 0px var(--color-black);
   --font-family-base: "Montserrat", sans-serif;
-  --container-width: 1460px;
-  --container-padding-x: 10px;
-  --section-padding-y: 50px;
+  --container-width: 91.21rem;
+  --container-padding-x: 0.6rem;
+  --section-padding-y: 3.13rem;
 }
 
 /*----------------------------------global--------------------------------*/
@@ -132,7 +132,7 @@ body.lock {
 
 body {
   font-family: var(--font-family-base);
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--color-black);
   background: var(--color-white);
@@ -153,6 +153,10 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0px var(--container-padding-x);
+}
+
+section {
+  padding: var(--section-padding-y) 0px;
 }
 
 ._ibg {
@@ -375,7 +379,7 @@ body {
 }
 .breadcrumbs__item:not(:last-child) {
   position: relative;
-  padding-right: 20px;
+  padding-right: 1.5rem;
 }
 .breadcrumbs__item:not(:last-child)::after {
   position: absolute;
@@ -487,13 +491,13 @@ body {
 }
 .popup__content {
   max-width: 554px;
-  background-color: #FFFFFF;
+  background-color: var(--color-white);
   padding: 70px 66px 35px;
   position: relative;
 }
 .popup__title {
   color: #000000;
-  font-size: 25px;
+  font-size: 1.5rem;
   line-height: normal;
   margin-bottom: 40px;
   text-align: center;
@@ -507,7 +511,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: red;
   transform: rotate(45deg);
 }
@@ -519,11 +523,11 @@ body {
   border-radius: 15px;
   box-shadow: var(--shadow);
   background: var(--color-white);
-  padding: 34px 49px;
+  padding: 2rem 3rem;
 }
 @media (max-width: 770px) {
   .form {
-    padding: 20px 10px;
+    padding: 1.5rem 0.6rem;
   }
 }
 .form__input {
@@ -531,16 +535,16 @@ body {
   background: rgb(236, 236, 236);
   width: 100%;
   margin-bottom: 24px;
-  padding: 15px 22px;
+  padding: 1rem 1.5rem;
   color: var(--color-black);
 }
 .form__input::-moz-placeholder {
   color: var(--color-black);
-  font-size: clamp(14px, 0.8vw, 16px);
+  font-size: clamp(14px, 0.8333333333vw, 16px);
 }
 .form__input::placeholder {
   color: var(--color-black);
-  font-size: clamp(14px, 0.8vw, 16px);
+  font-size: clamp(14px, 0.8333333333vw, 16px);
 }
 .form__input_textarea {
   resize: none;
@@ -548,12 +552,12 @@ body {
 }
 .form__button {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
   margin-left: auto;
   border-radius: 10px;
   background: var(--color-black);
   color: var(--color-red);
-  padding: 10px 62px;
+  padding: 0.6rem 3.8rem;
   cursor: pointer;
 }
 .form__checkbox {
@@ -572,7 +576,7 @@ body {
   border: 2px solid #e0e5ea;
   border-radius: 5px;
   vertical-align: sub;
-  margin-right: 5px;
+  margin-right: 0.3rem;
   flex: none;
 }
 .form__checkbox_custom::before {
@@ -597,7 +601,7 @@ body {
 /*----------------------------------form--------------------------------*/
 /*----------------------------------accordion--------------------------------*/
 .accordion__block {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 .accordion__summary {
   list-style: none;
@@ -605,7 +609,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.5rem;
   position: relative;
   width: 100%;
   background-color: #E0F0FA;
@@ -640,10 +644,10 @@ body {
   grid-template-rows: 0fr;
   transition-duration: 0.5s;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   background-color: #E0F0FA;
   opacity: 0;
-  margin-top: -30px;
+  margin-top: -2rem;
 }
 .accordion__content_body {
   overflow: hidden;
@@ -671,7 +675,7 @@ body {
 /*---------------------------------------tabs----------------------------*/
 /*----------------------------------footer--------------------------------*/
 .footer {
-  padding: 20px 0px;
+  padding: 1.5rem 0px;
 }
 .footer__body {
   display: flex;

@@ -9,7 +9,7 @@
     }
     &__item:not(:last-child){
         position: relative;
-        padding-right: 20px;
+        padding-right: 1.5rem;
     }
     &__item:not(:last-child)::after {
         position: absolute;

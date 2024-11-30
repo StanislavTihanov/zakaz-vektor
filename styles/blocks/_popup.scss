@@ -20,13 +20,13 @@
     }
     &__content {
         max-width: 554px;
-        background-color: #FFFFFF;
+        background-color: var(--color-white);
         padding: 70px 66px 35px;
         position: relative;
     }
     &__title {
         color: #000000;
-        font-size: 25px;
+        font-size: 1.5rem;
         line-height: normal;
         margin-bottom: 40px;
         text-align: center;
@@ -40,7 +40,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 40px;
+        font-size: 2.5rem;
         color: red;
         transform: rotate(45deg);
     }

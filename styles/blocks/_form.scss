@@ -4,21 +4,21 @@
     border-radius: 15px;
     box-shadow: var(--shadow);
     background: var(--color-white);
-    padding: 34px 49px;
+    padding: 2rem 3rem;
     @include mobile {
-        padding: 20px 10px;
+        padding: 1.5rem 0.6rem;
     }
     &__input {
         border-radius: 10px;
         background: rgb(236, 236, 236);
         width: 100%;
         margin-bottom: 24px;
-        padding: 15px 22px;
+        padding: 1rem 1.5rem;
         color: var(--color-black);
     }
     &__input::placeholder {
         color: var(--color-black);
-        font-size: clamp(14px, 0.8vw, 16px);
+        @include fluid-text(14, 16);
     }
     &__input_textarea {
         resize: none;
@@ -26,12 +26,12 @@
     }
     &__button {
         display: block;
-        margin-bottom: 25px;
+        margin-bottom: 1.5rem;
         margin-left: auto;
         border-radius: 10px;
         background: var(--color-black);
         color: var(--color-red);
-        padding: 10px 62px;
+        padding: 0.6rem 3.8rem;
         cursor: pointer;
     }
     &__checkbox {
@@ -50,7 +50,7 @@
         border: 2px solid #e0e5ea;
         border-radius: 5px;
         vertical-align: sub;
-        margin-right: 5px;
+        margin-right: 0.3rem;
         flex: none;
         &::before {
             position: absolute;

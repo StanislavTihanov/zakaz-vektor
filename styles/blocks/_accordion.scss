@@ -1,7 +1,7 @@
 /*----------------------------------accordion--------------------------------*/
 .accordion {
     &__block {
-        margin-bottom: 20px;
+        margin-bottom: 1.5rem;
     }
     &__summary {
         list-style: none;
@@ -9,7 +9,7 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         cursor: pointer; 
-        padding: 10px;
+        padding: 0.5rem;
         position: relative;
         width: 100%;
         background-color: #E0F0FA;
@@ -45,10 +45,10 @@
         grid-template-rows: 0fr;
         transition-duration: 0.5s;
         padding: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
         background-color: #E0F0FA;
         opacity: 0;
-        margin-top: -30px;
+        margin-top: -2rem;
         &_body {
             overflow: hidden;
         }
