@@ -19,10 +19,18 @@
         align-items: center;
     }
     &__content {
-        max-width: 554px;
+        max-width: 600px;
         background-color: var(--color-white);
         padding: 70px 66px 35px;
         position: relative;
+        opacity: 0;
+        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+        transition: all 0.8s ease 0s;
+    }
+    &.open .popup__content {
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+        visibility: visible;
     }
     &__title {
         color: #000000;
