@@ -229,7 +229,7 @@ section {
     color: var(--color-blue);
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 48rem) {
   .menu {
     position: fixed;
     left: 0;
@@ -316,7 +316,7 @@ section {
 .burger__wrapper {
   display: none;
 }
-@media (max-width: 770px) {
+@media (max-width: 48rem) {
   .burger__wrapper {
     width: 36px;
     height: 36px;
@@ -490,10 +490,18 @@ section {
   align-items: center;
 }
 .popup__content {
-  max-width: 554px;
+  max-width: 600px;
   background-color: var(--color-white);
   padding: 70px 66px 35px;
   position: relative;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  transition: all 0.8s ease 0s;
+}
+.popup.open .popup__content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+  visibility: visible;
 }
 .popup__title {
   color: #000000;
@@ -525,7 +533,7 @@ section {
   background: var(--color-white);
   padding: 2rem 3rem;
 }
-@media (max-width: 770px) {
+@media (max-width: 48rem) {
   .form {
     padding: 1.5rem 0.6rem;
   }
