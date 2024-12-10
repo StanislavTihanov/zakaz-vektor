@@ -104,17 +104,53 @@
   
   <!------------------------------------------------------форма обратной связи-->
   
-  <form class="form">
-    <input class="form__input" type="text" placeholder="Имя">
-    <input class="form__input" type="tel" placeholder="Телефон">
-    <input class="form__input" type="email" placeholder="E-mail">
-    <textarea class="form__input form__input_textarea" placeholder="Комментарий"></textarea>
-    <input class="form__button" type="submit" value="Отправить">
-    <label class="form__label">
-      <input class="form__checkbox" type="checkbox" name="coding-notes">
-      <span class="form__checkbox_custom"></span>
-        Нажимая кнопку...
-    </label>
+  <form class="form" action="#" id="form">
+    <div class="form__item">
+     <label class="form__label" for="formName">Имя*</label>
+     <input class="form__input _req" id="formName" type="text" name="name">
+     <span class="form__error">Заполните поле</span>
+    </div>
+    <div class="form__item">
+     <label class="form__label" for="formEmail">Email*</label>
+     <input class="form__input _req _email" id="formEmail" type="text" name="email">
+     <span class="form__error">Заполните поле</span>
+    </div>
+    <div class="form__item">
+     <label class="form__label" for="formNumber">Телефон*</label>
+     <input class="form__input _req _number" id="formNumber" type="text" name="number">
+     <span class="form__error">Заполните поле</span>
+    </div>
+    <div class="form__item">
+     <div class="form__label">Сроки</div>
+     <select class="select" name="deadlines">
+      <option value="от 1 дня до 3 дней" selected>от 1 дня до 3 дней</option>
+      <option value="от 5 дней до 10 дней">от 5 дней до 10 дней</option>
+      <option value="от 10 дней до 30 дней">от 10 дней до 30 дней</option>
+     </select>
+   </div>
+    <div class="form__item">
+     <label class="form__label" for="formMessage">Ссылка на макет Figma</label>
+     <textarea class="form__textarea" id="formMessage" name="message"></textarea>
+    </div>
+    <div class="form__item">
+     <div class="form__label">Прикрепить фото макета</div>
+     <div class="file">
+        <div class="file__item">
+           <input class="file__input" id="formImage" type="file" name="image" accept=".jpg, .png, .gif">
+           <div class="file__button">Выбрать</div>
+        </div>
+        <div class="file__preview" id="formPreview"></div>
+     </div>
+   </div>
+   <div class="form__item">
+      <div class="checkbox">
+         <input class="checkbox__input _req" id="formAgreement" type="checkbox" name="agreement" checked>
+         <label class="checkbox__label" for="formAgreement">
+           <span>Согласие на обработку <a href="policy.html">персональных данных</a></span>
+         </label>
+      </div>
+   </div>
+   <button class="form__button" type="submit">Отправить</button>
   </form>
   
   <!------------------------------------------------------форма обратной связи-->
@@ -261,12 +297,53 @@
     <div class="popup__body">
       <div class="popup__content">
         <a class="popup__close close-popup" href="#header">+</a>
-        <h2 class="popup__title">Заполните форму</h2>
-        <form class="form" action="sender.php" method="post">
-          <input class="form__input-name" type="text" name="name" placeholder="Имя Фамилия" required>
-          <input class="form__input-phone" type="text" name="phone" placeholder="Телефон" required>
-          <input class="form__input-email" type="email" name="email" placeholder="E-mail" required>
-          <button class="form__input-button send-form popup-link" href="#popup-form" type="button">Отправить</button>
+        <form class="form" action="#" id="form">
+          <div class="form__item">
+           <label class="form__label" for="formName">Имя*</label>
+           <input class="form__input _req" id="formName" type="text" name="name">
+           <span class="form__error">Заполните поле</span>
+          </div>
+          <div class="form__item">
+           <label class="form__label" for="formEmail">Email*</label>
+           <input class="form__input _req _email" id="formEmail" type="text" name="email">
+           <span class="form__error">Заполните поле</span>
+          </div>
+          <div class="form__item">
+           <label class="form__label" for="formNumber">Телефон*</label>
+           <input class="form__input _req _number" id="formNumber" type="text" name="number">
+           <span class="form__error">Заполните поле</span>
+          </div>
+          <div class="form__item">
+           <div class="form__label">Сроки</div>
+           <select class="select" name="deadlines">
+            <option value="от 1 дня до 3 дней" selected>от 1 дня до 3 дней</option>
+            <option value="от 5 дней до 10 дней">от 5 дней до 10 дней</option>
+            <option value="от 10 дней до 30 дней">от 10 дней до 30 дней</option>
+           </select>
+         </div>
+          <div class="form__item">
+           <label class="form__label" for="formMessage">Ссылка на макет Figma</label>
+           <textarea class="form__textarea" id="formMessage" name="message"></textarea>
+          </div>
+          <div class="form__item">
+           <div class="form__label">Прикрепить фото макета</div>
+           <div class="file">
+              <div class="file__item">
+                 <input class="file__input" id="formImage" type="file" name="image" accept=".jpg, .png, .gif">
+                 <div class="file__button">Выбрать</div>
+              </div>
+              <div class="file__preview" id="formPreview"></div>
+           </div>
+         </div>
+         <div class="form__item">
+            <div class="checkbox">
+               <input class="checkbox__input _req" id="formAgreement" type="checkbox" name="agreement" checked>
+               <label class="checkbox__label" for="formAgreement">
+                 <span>Согласие на обработку <a href="policy.html">персональных данных</a></span>
+               </label>
+            </div>
+         </div>
+         <button class="form__button" type="submit">Отправить</button>
         </form>
       </div>
     </div>

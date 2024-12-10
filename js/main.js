@@ -101,36 +101,36 @@ document.addEventListener ('click', (e) => {
 //------------------------------------------------------------------------Прокрутка при клике
 
 //------------------------------------------------------------------------Слайдер
-const mainSlider = document.querySelector('.main-slider');
-if (mainSlider) {
-  new Swiper(mainSlider, {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 20,
-    speed: 1000,
-    autoHeight: false,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      640: {
-        slidesPerView: 2,
-      },
-      980: {
-        slidesPerView: 3,
-      }
-    }
-  });
-}
+//const mainSlider = document.querySelector('.main-slider');
+//if (mainSlider) {
+//  new Swiper(mainSlider, {
+//    direction: 'horizontal',
+//    loop: true,
+//    slidesPerView: 3,
+//    spaceBetween: 20,
+//    speed: 1000,
+//    autoHeight: false,
+//    navigation: {
+//      nextEl: '.swiper-button-next',
+//      prevEl: '.swiper-button-prev',
+//    },
+//    pagination: {
+//      el: '.swiper-pagination',
+//      clickable: true,
+//    },
+//    breakpoints: {
+//      320: {
+//        slidesPerView: 1,
+//      },
+//      640: {
+//        slidesPerView: 2,
+//      },
+//      980: {
+//        slidesPerView: 3,
+//      }
+//    }
+//  });
+//}
 //------------------------------------------------------------------------Слайдер
 
 
@@ -476,104 +476,104 @@ if (mainSlider) {
 
 
 //------------------------------------------------------------------------popup
-const popupLinks = document.querySelectorAll('.popup-link');
-const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll(".lock-padding");
-
-
-let unlock = true;
-
-const timeout = 800;
-
-if (popupLinks.length > 0) {
-  for (let index = 0; index < popupLinks.length; index++) {
-    const popupLink = popupLinks[index];
-    popupLink.addEventListener("click", function (e) {
-      const popupName = popupLink.getAttribute('href').replace('#', '');
-      const currentPopup = document.getElementById(popupName);
-      popupOpen(currentPopup);
-      e.preventDefault();
-    });
-  }
-}
-
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
-  for (let index = 0; index < popupCloseIcon.length; index++) {
-    const el = popupCloseIcon[index];
-    el.addEventListener('click', function (e) {
-      popupClose(el.closest('.popup'));
-      e.preventDefault();
-    })
-  }
-}
-
-function popupOpen(currentPopup) {
-  if (currentPopup && unlock) {
-    const popupActive = document.querySelector('.popup.open');
-    if (popupActive) {
-      popupClose(popupActive, false);
-    } else {
-      bodyLock();
-    }
-    currentPopup.classList.add('open');
-    currentPopup.addEventListener("click", function (e) {
-      if (!e.target.closest('.popup__content')) {
-        popupClose(e.target.closest('.popup'));
-      }
-    });
-  }
-}
-
-function popupClose(popupActive, doUnlock = true) {
-  if (unlock) {
-    popupActive.classList.remove('open');
-    if (doUnlock) {
-      bodyUnlock();
-    }
-  }
-}
-
-function bodyLock() {
-  const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-  if (lockPadding.length > 0) {
-    for (let index = 0; index < lockPadding.length; index++) {
-      const el = lockPadding[index];
-      el.style.paddingRight = lockPaddingValue;
-    }
-  }
-  body.style.paddingRight = lockPaddingValue;
-  body.classList.add('lock');
-
-  unlock = false;
-  setTimeout(function () {
-    unlock = true;
-  }, timeout);
-}
-
-function bodyUnlock () {
-  setTimeout(function () {
-    if(lockPadding.length > 0) {
-      for (let index = 0; index < lockPadding.length; index++) {
-        const el = lockPadding[index];
-        el.style.paddingRight = '0px';
-      }
-  }
-    body.style.paddingRight = '0px';
-    body.classList.remove('lock');
-  }, timeout);
-  unlock = false;
-  setTimeout(function () {
-    unlock = true;
-  }, timeout);
-}
-
-document.addEventListener('keydown', function (e) {
-  if (e.which === 27) {
-    const popupActive = document.querySelector('.popup.open');
-    popupClose(popupActive);
-  }
-});
+//const popupLinks = document.querySelectorAll('.popup-link');
+//const body = document.querySelector('body');
+//const lockPadding = document.querySelectorAll(".lock-padding");
+//
+//
+//let unlock = true;
+//
+//const timeout = 800;
+//
+//if (popupLinks.length > 0) {
+//  for (let index = 0; index < popupLinks.length; index++) {
+//    const popupLink = popupLinks[index];
+//    popupLink.addEventListener("click", function (e) {
+//      const popupName = popupLink.getAttribute('href').replace('#', '');
+//      const currentPopup = document.getElementById(popupName);
+//      popupOpen(currentPopup);
+//      e.preventDefault();
+//    });
+//  }
+//}
+//
+//const popupCloseIcon = document.querySelectorAll('.close-popup');
+//if (popupCloseIcon.length > 0) {
+//  for (let index = 0; index < popupCloseIcon.length; index++) {
+//    const el = popupCloseIcon[index];
+//    el.addEventListener('click', function (e) {
+//      popupClose(el.closest('.popup'));
+//      e.preventDefault();
+//    })
+//  }
+//}
+//
+//function popupOpen(currentPopup) {
+//  if (currentPopup && unlock) {
+//    const popupActive = document.querySelector('.popup.open');
+//    if (popupActive) {
+//      popupClose(popupActive, false);
+//    } else {
+//      bodyLock();
+//    }
+//    currentPopup.classList.add('open');
+//    currentPopup.addEventListener("click", function (e) {
+//      if (!e.target.closest('.popup__content')) {
+//        popupClose(e.target.closest('.popup'));
+//      }
+//    });
+//  }
+//}
+//
+//function popupClose(popupActive, doUnlock = true) {
+//  if (unlock) {
+//    popupActive.classList.remove('open');
+//    if (doUnlock) {
+//      bodyUnlock();
+//    }
+//  }
+//}
+//
+//function bodyLock() {
+//  const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+//  if (lockPadding.length > 0) {
+//    for (let index = 0; index < lockPadding.length; index++) {
+//      const el = lockPadding[index];
+//      el.style.paddingRight = lockPaddingValue;
+//    }
+//  }
+//  body.style.paddingRight = lockPaddingValue;
+//  body.classList.add('lock');
+//
+//  unlock = false;
+//  setTimeout(function () {
+//    unlock = true;
+//  }, timeout);
+//}
+//
+//function bodyUnlock () {
+//  setTimeout(function () {
+//    if(lockPadding.length > 0) {
+//      for (let index = 0; index < lockPadding.length; index++) {
+//        const el = lockPadding[index];
+//        el.style.paddingRight = '0px';
+//      }
+//  }
+//    body.style.paddingRight = '0px';
+//    body.classList.remove('lock');
+//  }, timeout);
+//  unlock = false;
+//  setTimeout(function () {
+//    unlock = true;
+//  }, timeout);
+//}
+//
+//document.addEventListener('keydown', function (e) {
+//  if (e.which === 27) {
+//    const popupActive = document.querySelector('.popup.open');
+//    popupClose(popupActive);
+//  }
+//});
 //------------------------------------------------------------------------popup
 
 
@@ -627,3 +627,157 @@ document.addEventListener('keydown', function (e) {
 //}
 //------------------------------------------------------------------------Animation
 
+//------------------------------------------------------------------------Обработка формы
+//document.addEventListener('DOMContentLoaded', function () {
+//  const forms = document.querySelectorAll('form'); // Получаем все формы на странице
+//
+//  forms.forEach((form) => {
+//    const phoneInput = form.querySelector('._number'); // Поле ввода телефона
+//
+//    // Добавляем маску для номера телефона
+//    if (phoneInput) {
+//      Inputmask("+7 (999) 999-99-99").mask(phoneInput);
+//    }
+//
+//    form.addEventListener('submit', formSend);
+//
+//    async function formSend(e) {
+//      e.preventDefault();
+//
+//      let error = formValidate(form);
+//      let formData = new FormData(form);
+//
+//      const formImage = form.querySelector('#formImage');
+//      if (formImage && formImage.files[0]) {
+//        formData.append('image', formImage.files[0]);
+//      }
+//
+//      if (error === 0) {
+//        form.classList.add('_sending');
+//        let response = await fetch('sendmail.php', {
+//          method: 'POST',
+//          body: formData
+//        });
+//
+//      if (response.ok) {
+//        let result = await response.json();
+//        
+//        // Закрытие формы (например, скрытие через класс)
+//        form.style.display = 'none';
+//        
+//        // Добавляем сообщение об успешной отправке
+//        const successMessage = document.createElement('div');
+//        successMessage.classList.add('success-message'); // Добавляем класс для стилизации
+//        successMessage.textContent = 'Форма успешно отправлена! Спасибо за ваш отклик.';
+//        form.parentElement.appendChild(successMessage); // Добавляем сообщение в контейнер формы
+//        
+//        const formPreview = form.querySelector('#formPreview');
+//        if (formPreview) {
+//          formPreview.innerHTML = '';
+//        }
+//        form.reset();
+//        form.classList.remove('_sending');
+//      } else {
+//        showErrorMessage('Ошибка при отправке формы');
+//        form.classList.remove('_sending');
+//      }
+//      }
+//    }
+//
+//    function formValidate(form) {
+//      let error = 0;
+//      let formReq = form.querySelectorAll('._req');
+//
+//      formReq.forEach((input) => {
+//        formRemoveError(input);
+//
+//        if (input.classList.contains('_email')) {
+//          if (!emailTest(input)) { // проверка на корректность email
+//            formAddError(input);
+//            error++;
+//          }
+//        } else if (input.classList.contains('_number')) {
+//          if (!phoneTest(input)) { // проверка на корректность телефона
+//            formAddError(input);
+//            error++;
+//          }
+//        } else if (input.getAttribute('type') === "checkbox" && input.checked === false) {
+//          formAddError(input);
+//          error++;
+//        } else {
+//          if (input.value === '') {
+//            formAddError(input);
+//            error++;
+//          }
+//        }
+//      });
+//      return error;
+//    }
+//
+//    function formAddError(input) {
+//      input.parentElement.classList.add('_error');
+//      input.classList.add('_error');
+//    
+//      // Ищем элемент с классом form__error внутри контейнера родителя
+//      const errorSpan = input.parentElement.querySelector('.form__error');
+//      if (errorSpan) {
+//        errorSpan.classList.add('view'); // Добавляем класс view
+//      }
+//    }
+//    
+//    function formRemoveError(input) {
+//      input.parentElement.classList.remove('_error');
+//      input.classList.remove('_error');
+//    
+//      // Ищем элемент с классом form__error внутри контейнера родителя
+//      const errorSpan = input.parentElement.querySelector('.form__error');
+//      if (errorSpan) {
+//        errorSpan.classList.remove('view'); // Удаляем класс view
+//      }
+//    }
+//    
+//    // проверка email
+//    function emailTest(input) {
+//      return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(input.value);
+//    }
+//
+//    // проверка телефона
+//    function phoneTest(input) {
+//      return /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(input.value);
+//    }
+//
+//    // Работа с изображением
+//    const formImage = form.querySelector('#formImage');
+//    const formPreview = form.querySelector('#formPreview');
+//
+//    if (formImage) {
+//      formImage.addEventListener('change', () => {
+//        uploadFile(formImage.files[0]);
+//      });
+//
+//      function uploadFile(file) {
+//        if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+//          showErrorMessage('Только изображения');
+//          formImage.value = '';
+//          return;
+//        }
+//        if (file.size > 2 * 1024 * 1024) {
+//          showErrorMessage('Файл должен быть менее 2 МБ');
+//          return;
+//        }
+//        let reader = new FileReader();
+//        reader.onload = function (e) {
+//          if (formPreview) {
+//            formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+//          }
+//        };
+//        reader.onerror = function (e) {
+//          showErrorMessage('Ошибка загрузки изображения');
+//        };
+//        reader.readAsDataURL(file);
+//      }
+//    }
+//  });
+//});
+//
+//------------------------------------------------------------------------Обработка формы
