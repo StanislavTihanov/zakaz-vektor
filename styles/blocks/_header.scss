@@ -16,6 +16,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 10px;
+        @include fluid-text(12, 16);
     }
     &__link {
         @include hover {

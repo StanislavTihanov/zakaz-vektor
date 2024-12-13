@@ -38,7 +38,7 @@ section {
     }
 }
 .title {
-    @include fluid-text(30, 60);
+    @include fluid-text(24, 60);
     line-height: 100%;
     color: var(--color-red);
 }

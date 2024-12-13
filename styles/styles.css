@@ -173,13 +173,13 @@ section {
 }
 
 .title {
-  font-size: clamp(30px, 3.125vw, 60px);
+  font-size: clamp(1.5rem, 4.1666666667vw, 3.75rem);
   line-height: 100%;
   color: var(--color-red);
 }
 
 .subtitle {
-  font-size: clamp(18px, 1.6666666667vw, 32px);
+  font-size: clamp(1.125rem, 2.2222222222vw, 2rem);
   line-height: 100%;
   color: var(--color-white);
 }
@@ -202,6 +202,7 @@ section {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  font-size: clamp(0.75rem, 1.1111111111vw, 1rem);
 }
 @media (hover: hover) {
   .header__link:hover {
@@ -222,7 +223,7 @@ section {
   line-height: 17px;
   text-transform: uppercase;
   position: relative;
-  font-size: clamp(12px, 0.7291666667vw, 14px);
+  font-size: clamp(0.75rem, 0.9722222222vw, 0.875rem);
 }
 @media (hover: hover) {
   .menu__link:hover {
@@ -645,7 +646,7 @@ section {
   transform: scale(1);
 }
 .checkbox__label {
-  font-size: clamp(0.8rem, 1.4vw, 1rem);
+  font-size: clamp(1rem, 2.2222222222vw, 2rem);
   line-height: 140%;
   display: inline-flex;
   align-items: center;
