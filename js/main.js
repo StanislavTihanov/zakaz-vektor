@@ -11,6 +11,37 @@
 //}
 //------------------------------------------------------------------------preloader
 
+//------------------------------------------------------------------------таймер обратного отсчета
+//const startDays = 2; // Количество дней
+//const startHours = 5; // Количество часов
+//const startMinutes = 10; // Количество минут
+//const startSeconds = 0; // Количество секунд
+//
+//// Переводим все в секунды
+//let time = startDays * 24 * 60 * 60 + startHours * 60 * 60 + startMinutes * 60 + startSeconds;
+//
+//const countdownElement = document.getElementById('countdown');
+//
+//function updateCountdown() {
+//    const days = Math.floor(time / (24 * 60 * 60)); // Количество дней
+//    const hours = Math.floor((time % (24 * 60 * 60)) / 3600); // Количество часов
+//    const minutes = Math.floor((time % 3600) / 60); // Количество минут
+//    const seconds = time % 60; // Количество секунд
+//
+//    // Форматируем время
+//    countdownElement.innerText = `${days}:${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+//
+//    if (time > 0) {
+//        time--;
+//    } else {
+//        clearInterval(timer);
+//        countdownElement.innerText = "Время вышло!";
+//    }
+//}
+//
+//const timer = setInterval(updateCountdown, 1000);
+//------------------------------------------------------------------------таймер обратного отсчета
+
 
 //------------------------------------------------------------------------появление бекграунда у шапки при прокрутки вниз
 //window.addEventListener('scroll', () => {
