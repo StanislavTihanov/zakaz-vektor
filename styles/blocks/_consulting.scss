@@ -1,0 +1,59 @@
+/*----------------------------------consulting--------------------------------*/
+.consulting {
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid #482c0c78;
+        padding-bottom: 1.5rem;
+        position: relative;
+        @include mobile {
+            display: block
+        }
+        &_number {
+            @include fluid-text(30, 41);
+            color: rgba(72, 44, 12, 0.3);
+            @include mobile {
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+        }
+        &_title {
+            font-weight: 500;
+            text-transform: uppercase;
+            flex-basis: 23rem;
+            @include fluid-text(14, 16);
+            @include mobile {
+                margin-bottom: 1rem;
+            }
+        }
+        &_description {
+            flex-basis: 32rem;
+            @include fluid-text(14, 16);
+        }
+        &_icon {
+            @include mobile {
+                position: absolute;
+                top: -0.5rem;
+                right: 0;
+            }
+            svg {
+                transition: all 0.3s;
+                @include mobile {
+                    width: 1rem;
+                    height: 2rem;
+                }
+            }
+        }
+        @include hover {
+            .consulting__link_icon svg:last-child {
+                transform: rotate(47deg);
+            }
+        }
+
+    }
+}
+
+/*----------------------------------consulting--------------------------------*/

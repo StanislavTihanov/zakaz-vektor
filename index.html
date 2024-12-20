@@ -5,20 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="эталон">
-  <meta name="keywords" content="эталон">
-  <meta property="og:title" content="эталон"/>
+  <meta name="description" content="вектор">
+  <meta name="keywords" content="вектор">
+  <meta property="og:title" content="вектор"/>
   <meta property="og:url" content="ссылка на сайт"/>
   <meta property="og:image:width" content="1000"/>
   <meta property="og:image:height" content="500"/>
-  <meta property="og:description" content="эталон"/>
+  <meta property="og:description" content="вектор"/>
   <meta property="og:image" content="путь к картинке/image.webp"/>
-  <title>Эталон</title>
+  <title>Вектор</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/x-icon" href="/images/favicon.icon">
-  <link rel="stylesheet" href="styles/swiper.min.css">
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
@@ -33,22 +32,27 @@
           <nav class="menu" id="menu">
             <ul>
               <li>
-                <a class="menu__link" data-goto=".reviews" href="#">Главная</a>
+                <a class="menu__link" href="goz.html">Услуги по ГОЗ</a>
               </li>
               <li>
-                <a class="menu__link" data-goto=".rates" href="#">О нас</a>
+                <a class="menu__link" href="services.html">Другие услуги</a>
               </li>
               <li>
-                <a class="menu__link" data-goto=".about" href="#">Каталог</a>
+                <a class="menu__link" href="expertise.html">экспертизы</a>
               </li>
               <li>
-                <a class="menu__link" data-goto=".locations" href="#">Контакты</a>
+                <a class="menu__link" href="#footer">Контакты</a>
+              </li>
+              <li>
+                <a class="menu__link" href="tel:+777777777776">+7 (900) 000 00 00</a>
               </li>
             </ul>
+            <div class="menu__button">
+              <a class="link popup-link" href="#popup">Получить консультацию</a>
+            </div>
           </nav>
-          <div class="header__links">
-            <a class="header__link" href="tel:+777777777776">+7 (777) 777 77-77</a>
-            <a class="header__link" href="mailto:stas89tihanov@gmail.com">stas89tihanov@gmail.com</a>
+          <div class="header__button">
+            <a class="link popup-link" href="#popup">Получить консультацию</a>
           </div>
           <div class="burger__wrapper" aria-label="кнопка открытия меню">
             <div class="burger" id="hamb">
@@ -64,71 +68,465 @@
     <main class="main">
       <section class="main-section">
         <div class="main-section__content _container">
-          <div class="title">
-            <h1>Эталон2.0</h1>
+          <div class="main-section__info">
+            <div class="title">
+              <h1>«Вектор» — консалтинг <br> в области гособоронзаказа</h1>
+            </div>
+            <div class="main-section__text">
+              <p>Поможем вашему бизнесу успешно работать с государственными контрактами — обеспечим полное сопровождение и поддержку на каждом этапе</p>
+            </div>
           </div>
-          <picture>
-            <source media="(max-width: 390px)" srcset="images/test.webp">
-            <source media="(min-width: 1920px)" srcset="images/test.webp">
-            <img src="images/test.webp" alt="image" loading="lazy">
-          </picture>
+          <div class="main-section__body">
+            <div class="main-section__lists">
+              <div class="main-section__list">
+                <div class="main-section__list_box _anim-items">
+                  <p>Услуги по ГОЗ</p>
+                </div>
+                <div class="main-section__list_box _anim-items">
+                  <p>Экспертизы</p>
+                </div>
+              </div>
+              <div class="main-section__list">
+                <div class="main-section__list_box _anim-items">
+                  <p>Аутсорсинг</p>
+                </div>
+                <div class="main-section__list_box _anim-items">
+                  <p>Аудит</p>
+                </div>
+              </div>
+              <a class="main-section__list_link _anim-items" href="goz.html">Выбрать услугу</a>
+            </div>
+            <div class="main-section__bg _ibg">
+              <picture>
+                <source media="(max-width: 412px)" srcset="images/main-image1-400.webp">
+                <source media="(min-width: 1920px)" srcset="images/main-image1@2x.webp">
+                <img src="images/main-image1.webp" alt="image" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="main-section__blocks">
+            <div class="main-section__block">
+              <div class="subtitle">
+                <svg width="14" height="40" viewBox="0 0 14 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="2" height="40" fill="#FCFAF7" />
+                  <rect x="8" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="4" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="12" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                </svg>
+                <h3>7+ лет</h3>
+              </div>
+              <div class="text">
+                <p>Наш опыт работы в сфере консалтинга по ГОЗ</p>
+              </div>
+            </div>
+            <div class="main-section__block">
+              <div class="subtitle">
+                <svg width="14" height="40" viewBox="0 0 14 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="8" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="4" width="2" height="40" fill="#FCFAF7" />
+                  <rect x="12" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                </svg>
+                <h3>Работа с рисками</h3>
+              </div>
+              <div class="text">
+                <p>Знаем, как минимизировать риски и увеличить вашу прибыль</p>
+              </div>
+            </div>
+            <div class="main-section__block">
+              <div class="subtitle">
+                <svg width="14" height="40" viewBox="0 0 14 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="8" width="2" height="40" fill="#FCFAF7" />
+                  <rect x="4" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="12" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                </svg>
+                <h3>Опытная команда</h3>
+              </div>
+              <div class="text">
+                <p>Наша команда — эксперты в области госзакупок, бухгалтерского учёта и права</p>
+              </div>
+            </div>
+            <div class="main-section__block">
+              <div class="subtitle">
+                <svg width="14" height="40" viewBox="0 0 14 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="8" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="4" width="2" height="40" fill="#FCFAF7" fill-opacity="0.1" />
+                  <rect x="12" width="2" height="40" fill="#FCFAF7" />
+                </svg>
+                <h3>100% лояльных клиентов</h3>
+              </div>
+              <div class="text">
+                <p>К нам приходят снова и доверяют процессы на аутсорсинг</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="consulting">
+        <div class="consulting__content _container">
+          <div class="title">
+            <h2>Услуги консалтинга</h1>
+          </div>
+          <div class="consulting__body">
+            <div class="consulting__list">
+              <a class="consulting__link" href="goz.html#container-01">
+                <span class="consulting__link_number">01</span>
+                <div class="consulting__link_title">
+                  <h3>Формирование расчетно-калькуляционных материалов (РКМ)</h3>
+                </div>
+                <div class="consulting__link_description">
+                  <p>Мы помогаем сформировать РКМ на любом этапе контракта, чтобы вы могли уверенно обосновать свою цену по ГОЗ</p>
+                </div>
+                <div class="consulting__link_icon">
+                  <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                    <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                    <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                  </svg>                      
+                </div>
+              </a>
+              <a class="consulting__link" href="goz.html#container-02">
+                <span class="consulting__link_number">02</span>
+                <div class="consulting__link_title">
+                  <h3>Организация ведения раздельного учета</h3>
+                </div>
+                <div class="consulting__link_description">
+                  <p>Создаем локальные нормативные документы и рекомендации, чтобы ваш учет был всегда в порядке и соответствовал требованиям законодательства</p>
+                </div>
+                <div class="consulting__link_icon">
+                  <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                    <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                    <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                  </svg>                      
+                </div>
+              </a>
+              <a class="consulting__link" href="goz.html#container-03">
+                <span class="consulting__link_number">03</span>
+                <div class="consulting__link_title">
+                  <h3>Комплексное ведение контрактов ГОЗ</h3>
+                </div>
+                <div class="consulting__link_description">
+                  <p>Аутсорсинг всех процессов исполнения контракта по ГОЗ для повышения вашей эффективности и снижения затрат</p>
+                </div>
+                <div class="consulting__link_icon">
+                  <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                    <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                    <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                  </svg>                      
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages" id="advantages">
+        <div class="advantages__content _container">
+          <div class="title">
+            <h2>Преимущества <br> работы с «Вектор»</h1>
+          </div>
+          <div class="advantages__body">
+            <div class="advantages__block">
+              <div class="subtitle">
+                <h3>Опытная команда</h3>
+              </div>
+              <div class="text">
+                <p>Наша команда — эксперты в области госзакупок, бухгалтерского учёта и права</p>
+              </div>
+              <div class="advantages__block_lines">
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+              </div>
+            </div>
+            <div class="advantages__block">
+              <div class="subtitle">
+                <h3>Минимизация рисков</h3>
+              </div>
+              <div class="text">
+                <p>Защита от ответственности в рамках ГОЗМы помогаем избежать административной и уголовной ответственности, обеспечивая защиту вашего бизнеса</p>
+              </div>
+              <div class="advantages__block_lines">
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+              </div>
+            </div>
+            <div class="advantages__img">
+              <picture>
+                <source media="(min-width: 1920px)" srcset="images/advantages-image@2x.webp">
+                <img src="images/advantages-image.webp" alt="image" loading="lazy">
+              </picture>
+            </div>
+            <div class="advantages__block">
+              <div class="subtitle">
+                <h3>Увеличение прибыли через оптимизацию расходов</h3>
+              </div>
+              <div class="text">
+                <p>Наши решения направлены на повышение финансовой эффективности и минимизацию затрат в рамках госзаказов</p>
+              </div>
+              <div class="advantages__block_lines">
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+              </div>
+            </div>
+            <div class="advantages__block">
+              <div class="subtitle">
+                <h3>Комплексный подход к решению вопросов</h3>
+              </div>
+              <div class="text">
+                <p>Предлагаем полное сопровождение от анализа до реализации, учитывая все нюансы вашей деятельности</p>
+              </div>
+              <div class="advantages__block_lines">
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+              </div>
+            </div>
+            <div class="advantages__block">
+              <div class="subtitle">
+                <h3>Строгая конфиденциальность</h3>
+              </div>
+              <div class="text">
+                <p>На всех этапах сотрудничества мы гарантируем защиту ваших данных и информации, что критически важно в сфере гособоронзаказов</p>
+              </div>
+              <div class="advantages__block_lines">
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+                <span class="advantages__block_line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services__content _container">
+          <div class="title">
+            <h2>Другие услуги для устойчивого <br> развития вашей компании</h1>
+          </div>
+          <div class="services__body">
+              <div class="services__block">
+                <a class="consulting__link" href="services.html#container-04">
+                  <div class="consulting__link_icon">
+                    <img src="images/services-icon1.svg" alt="icon">
+                  </div>
+                  <div class="consulting__link_title">
+                    <h3>Внутренний аудит</h3>
+                  </div>
+                  <div class="consulting__link_icon">
+                    <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                    </svg>                      
+                  </div>
+                </a>
+                <a class="consulting__link" href="services.html#container-06">
+                  <div class="consulting__link_icon">
+                    <img src="images/services-icon2.svg" alt="icon">
+                  </div>
+                  <div class="consulting__link_title">
+                    <h3>Бухгалтерский аутсорсинг</h3>
+                  </div>
+                  <div class="consulting__link_icon">
+                    <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                    </svg>                      
+                  </div>
+                </a>
+              </div>
+              <div class="services__block">
+                <a class="consulting__link" href="expertise.html#container-08">
+                  <div class="consulting__link_icon">
+                    <img src="images/services-icon3.svg" alt="icon">
+                  </div>
+                  <div class="consulting__link_title">
+                    <h3>Экономическая и бухгалтерская экпертиза</h3>
+                  </div>
+                  <div class="consulting__link_icon">
+                    <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                    </svg>                      
+                  </div>
+                </a>
+                <a class="consulting__link" href="services.html#container-07">
+                  <div class="consulting__link_icon">
+                    <img src="images/services-icon4.svg" alt="icon">
+                  </div>
+                  <div class="consulting__link_title">
+                    <h3>Юридический аутсорсинг</h3>
+                  </div>
+                  <div class="consulting__link_icon">
+                    <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                    </svg>                      
+                  </div>
+                </a>
+              </div>
+              <div class="services__block">
+                <a class="consulting__link" href="services.html#container-05">
+                  <div class="consulting__link_icon">
+                    <img src="images/services-icon5.svg" alt="icon">
+                  </div>
+                  <div class="consulting__link_title">
+                    <h3>Корпоративные программы</h3>
+                  </div>
+                  <div class="consulting__link_icon">
+                    <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="1.26459" y1="34.0392" x2="31.4102" y2="1.32239" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="3.14563" y1="1.00001" x2="32.2296" y2="1.00001" stroke="#C6BCB1" stroke-width="2"/>
+                      <line x1="31.24" y1="30.0849" x2="31.24" y2="1.00085" stroke="#C6BCB1" stroke-width="2"/>
+                    </svg>                      
+                  </div>
+                </a>
+              </div>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="footer">
-      <div class="footer__content _container">
-          <a class="footer__logo" href="index.html">
-            <img src="images/logo.svg" alt="logo">
+    <div class="popup" id="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a class="popup__close close-popup" href="#header">
+            <svg width="128" height="12" viewBox="0 0 128 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M128 5.99999L118 0.226487L118 11.7735L128 5.99999ZM8.74228e-08 7L119 6.99999L119 4.99999L-8.74228e-08 5L8.74228e-08 7Z" fill="#F7E1BE"/>
+            </svg>              
           </a>
-        <div class="footer__body">
-          <div class="footer__box">
-            <h3 class="footer__title">Навигация</h3>
-            <nav class="footer__nav">
-              <ul>
-                <li>
-                  <a href="#">О нас</a>
-                </li>
-                <li>
-                  <a href="#">Тарифы</a>
-                </li>
-                <li>
-                  <a href="#">Локации</a>
-                </li>
-                <li>
-                  <a href="#">Отзывы</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="footer__box">
-            <h3 class="footer__title">Навигация</h3>
-            <nav class="footer__nav">
-              <ul>
-                <li>
-                  <a href="#">О нас</a>
-                </li>
-                <li>
-                  <a href="#">Тарифы</a>
-                </li>
-                <li>
-                  <a href="#">Локации</a>
-                </li>
-                <li>
-                  <a href="#">Отзывы</a>
-                </li>
-              </ul>
-            </nav>
+          <div class="popup__form">
+            <form class="form" action="send.php" method="POST" id="form">
+              <div class="form__description">
+                <div class="form__title">
+                  <h3>Для подбора подходящей услуги заполните форму и наш менеджер свяжется с вами для уточнения всех деталей</h3>
+                </div>
+              </div>
+              <div class="form__item">
+                <input class="form__input _req" id="formName" type="text" name="name" placeholder="Ваше имя">
+                <span class="form__error">Заполните поле</span>
+              </div>
+              <div class="form__item">
+                <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="+ 7 (900) 000 00 00">
+                <span class="form__error">Заполните поле</span>
+              </div>
+              <button class="form__button" type="submit">Отправить</button>
+              <div class="form__item">
+               <div class="checkbox">
+                  <input class="checkbox__input _req" id="formAgreement" type="checkbox" name="agreement" checked>
+                  <label class="checkbox__label" for="formAgreement">
+                    <span>Я ознакомился и согласен с
+                      <a href="policy.html">
+                        Политикой обработки персональных данных
+                      </a>
+                    </span>
+                  </label>
+               </div>
+              </div>
+            </form>
           </div>
         </div>
+      </div>
+    </div>
+    <footer class="footer" id="footer">
+      <div class="footer__content _container">
+        <div class="footer__form">
+          <form class="form" action="send.php" method="POST" enctype="multipart/form-data" id="form">
+            <div class="form__description">
+              <div class="form__title">
+                <h3>Для подбора подходящей услуги свяжитесь с нами любым удобным способом</h3>
+              </div>
+              <div class="form__text">
+                <p>Заполните форму и наш менеджер свяжется с вами для уточнения всех деталей</p>
+              </div>
+            </div>
+            <div class="form__block">
+              <div class="form__item">
+                <input class="form__input _req" id="formName" type="text" name="name" placeholder="Ваше имя">
+                <span class="form__error">Заполните поле</span>
+               </div>
+               <div class="form__item">
+                <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="+ 7 (900) 000 00 00">
+                <span class="form__error">Заполните поле</span>
+               </div>
+               <div class="form__inner">
+                 <button class="form__button" type="submit">Отправить</button>
+                 <div class="form__item">
+                  <div class="checkbox">
+                     <input class="checkbox__input _req" id="formAgreement1" type="checkbox" name="agreement" checked>
+                     <label class="checkbox__label" for="formAgreement1">
+                       <span>Я ознакомился и согласен с
+                         <a href="policy.html">
+                           Политикой обработки персональных данных
+                         </a>
+                       </span>
+                     </label>
+                  </div>
+                 </div>
+               </div>
+            </div>
+          </form>
+        </div>
+        <div class="footer__body">
+          <div class="footer__block">
+            <a class="footer__logo" href="index.html">
+              <img src="images/footer-logo.svg" alt="logo">
+            </a>
+            <div class="footer__contacts">
+              <div class="footer__link">
+                <a href="mailto:example@gmail.com">example@gmail.com</a>
+              </div>
+              <div class="footer__link">
+                <a href="tel:+79999999999">+7 (999) 999 99 99</a>
+              </div>
+              <address>г. Санкт-Петербург, <br> ул Восстания, 32, офис 10</address>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <ul>
+              <li>
+                <a class="footer__link" href="#">Главная</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Услуги по ГОЗ</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Другие услуги</a>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Преимущества компании</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div class="footer__bottom">
-          
+          <a href="#!">Политика конфиденциальности</a>
+          <a href="#!">Дизайн сайта</a>
         </div>
       </div>
     </footer>
   </div>
   <script src="https://unpkg.com/imask"></script>
-  <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

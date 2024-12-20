@@ -1,41 +1,51 @@
 /*----------------------------------form--------------------------------*/
 .form {
-    max-width: 600px;
     margin: 0 auto;
-    color: var(--color-black);
     padding: 2rem;
-    background-color: var(--color-white);
     border-radius: 5px;
     margin-bottom: 1rem;
     position: relative;
-    &::after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: #4d036231 url(../images/loading.gif) center / 50px no-repeat;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease 0s;
-      }
+    display: inline-flex;
+    gap: 3.5rem;
+    @include desktop {
+        flex-wrap: wrap;
+    }
+    @include mobile {
+        padding: 0rem;
+    }
+    &__description {
+        flex-basis: 43rem;
+    }
+    &__title {
+        @include fluid-text(24, 30);
+        line-height: 100%;
+        font-family: 'Playfair', sans-serif;
+        margin-bottom: 2rem;
+    }
     &._sending::after {
         opacity: 1;
         visibility: visible;
     }
     &__label {
         font-size: 1rem;
-        display: block;
         margin-bottom: 0.5rem;
     }
-    &__input,
-    &__textarea {
+    &__item,
+    &__inner {
         width: 100%;
-        background-color: #f1d5f9;
-        padding: 0.7rem;
-        border-radius: 5px;
+    }
+    &__input {
+        background-color: #fcfaf734;
+        padding: 1rem 1.6rem;
+        border: 1px solid rgba(252, 250, 247, 0.3);
+        border-radius: 2px;
         transition: all 0.3s ease 0s;
+        width: 100%;
+        color: var(--color-white);
+        &::placeholder {
+            color: rgba(252, 250, 247, 0.6);
+            @include fluid-text(14, 16);
+        }
         &:focus {
             box-shadow: 0 0 15px var(--color-blue);
         }
@@ -51,55 +61,27 @@
     &__error.view {
         opacity: 1;
     }
-    &__textarea {
-        resize: none;
+    &__button {
+        width: 100%;
+        padding: 0.9rem 1.6rem;
+        background-color: var(--color-blue);
+        cursor: pointer;
+        color: var(--color-brow);
+        border: 1px solid rgba(252, 250, 247, 0.3);
+        border-radius: 2px;
+        font-weight: 600;
+        @include fluid-text(14, 16);
+        backdrop-filter: blur(4px);
+        background: #fcfaf7;
+        text-transform: uppercase;
         margin-bottom: 1rem;
     }
-    &__button {
-        width: 100%;
-        padding: 1rem;
-        background-color: var(--color-blue);
-        cursor: pointer;
-        color: var(--color-white);
-        border-radius: 5px;
-        font-weight: 700;
-        font-size: 1.5rem;
-    }
-}
-.select {
-    background-color: #f1d5f9;
-    color: var(--color-violet);
-    padding: 0.4rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-}
-.file {
-    &__item {
-        position: relative;
-    }
-    &__input {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        font-size: 0;
-        cursor: pointer;
-    }
-    &__button {
-        background-color: var(--color-blue);
-        color: var(--color-white);
-        display: inline-flex;
-        padding: 0.4rem;
-        border-radius: 5px;
-    }
-    &__preview {
-        display: inline-block;
-        max-width: 100px;
-        margin-top: 1rem;
-        img {
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        @include mobile {
+            flex-wrap: wrap;
             width: 100%;
         }
     }
@@ -117,22 +99,24 @@
         }
     }
     &__label {
-        @include fluid-text(16, 32);
+        @include fluid-text(12, 14);
         line-height: 140%;
         display: inline-flex;
         align-items: center;
         width: 100%;
         position: relative;
         cursor: pointer;
+        span {
+            opacity: 0.5;
+        }
         &::before {
             content: '';
             align-self: flex-start;
             flex: 0 0 16px;
             height: 16px;
-            background-color: var(--color-white);
             border-radius: 2px;
             margin-right: 0.5rem;
-            border: 1px solid var(--color-blue);
+            border: 0.50px solid rgba(252, 250, 247, 0.5);
         }
         &::after {
             transition: all 0.3s ease 0s;
@@ -142,14 +126,18 @@
             height: 8px;
             top: 4px;
             left: 4px;
-            background-color: var(--color-blue);
+            background-color: var(--color-white);
             transform: scale(0);
         }
         a {
-            color: var(--color-pink);
             display: inline-block;
         }
     }
-}
 
+}
+.success-message {
+    display: flex;
+    justify-content: center;
+    @include fluid-text(24, 30);
+}
 /*----------------------------------form--------------------------------*/

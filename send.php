@@ -6,8 +6,8 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 
 // Настройки Telegram
-$botToken = "ТОКЕН";
-$chatId = "CHAT_ID";
+$botToken = "7672204552:AAGdizfDBS99-O0AnsJMsDSfNJPjVcuoeVo";
+$chatId = "1303984947";
 
 // Настройки PHPMailer
 $mail = new PHPMailer(true);
@@ -47,36 +47,6 @@ if (!empty($_POST['message'])) {
     $message .= "<b>Ссылка на макет:</b> " . htmlspecialchars($_POST['message']) . "\n";
 }
 
-// Работа с файлом (если прикреплен)
-if (!empty($_FILES['image']['tmp_name'])) {
-    // Загрузка файла
-    $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $filePath)) {
-        // Для почты
-        $body .= '<p><strong>Фото макета:</strong> Во вложении</p>';
-        $mail->addAttachment($filePath);
-
-        // Для Telegram
-        $url = "https://api.telegram.org/bot{$botToken}/sendDocument";
-        $postData = [
-            'chat_id' => $chatId,
-            'caption' => $message,
-            'document' => new CURLFile($filePath)
-        ];
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
-        curl_exec($ch);
-        curl_close($ch);
-    } else {
-        $body .= '<p><strong>Фото макета:</strong> Ошибка загрузки файла</p>';
-        $message .= "<b>Фото макета:</b> Ошибка загрузки файла\n";
-    }
-}
-
 // Отправка письма через PHPMailer
 $mail->Body = $body;
 try {
@@ -103,6 +73,34 @@ if (empty($_FILES['image']['tmp_name'])) {
     curl_exec($ch);
     curl_close($ch);
 }
+
+// --------------Проверки на спам
+if (!empty($_POST['hidden_field'])) {
+    echo json_encode(['message' => 'Ошибка: подозрение на спам']);
+    exit;
+}
+
+session_start();
+if (isset($_SESSION['last_submit']) && (time() - $_SESSION['last_submit'] < 60)) {
+    echo json_encode(['message' => 'Ошибка: вы слишком часто отправляете форму']);
+    exit;
+}
+$_SESSION['last_submit'] = time();
+
+if (!isset($_SERVER['HTTP_REFERER']) || strpos($_SERVER['HTTP_REFERER'], 'ваш_домен') === false) {
+    echo json_encode(['message' => 'Ошибка: подозрительный запрос']);
+    exit;
+}
+
+session_start(); // Убедитесь, что сессия активирована
+
+// Проверка CSRF-токена
+if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+    echo json_encode(['message' => 'Ошибка: неверный CSRF-токен']);
+    exit;
+}
+
+// --------------Проверки на спам
 
 // Ответ для клиента
 $response = ['email_status' => $emailStatus, 'telegram_status' => 'Данные отправлены в Telegram!'];

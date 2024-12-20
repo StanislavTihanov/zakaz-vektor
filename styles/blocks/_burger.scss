@@ -1,7 +1,7 @@
 /*----------------------------------burger--------------------------------*/
 .burger__wrapper {
     display: none;
-    @include mobile {
+    @include table {
         width: 36px;
         height: 36px;
         flex: 0 0 auto;
@@ -13,7 +13,7 @@
             z-index: 2;
             cursor: pointer;
             &__line {
-                height: 5px;
+                height: 2px;
                 width: 27px;
                 position: absolute;
                 transition: all 0.3s ease 0s;

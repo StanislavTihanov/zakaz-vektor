@@ -5,8 +5,7 @@ body.lock {
 body { 
     font-family: var(--font-family-base); 
     font-size: 1rem;
-    font-weight: 400; 
-    color: var(--color-black); 
+    color: var(--color-brow); 
     background: var(--color-white);
 }
 .wrapper {
@@ -24,7 +23,10 @@ body {
     padding: 0px var(--container-padding-x);
 }
 section {
-    padding: var(--section-padding-y) 0px;
+    padding: var(--section-padding-y) 0rem;
+    @include mobile {
+        padding: 2rem 0px;
+    }
 }
 ._ibg {
     position: relative;
@@ -40,12 +42,36 @@ section {
 .title {
     @include fluid-text(24, 60);
     line-height: 100%;
-    color: var(--color-red);
+    font-family: 'Playfair', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+    @include mobile {
+        margin-bottom: 2rem;
+    }
 }
 .subtitle {
-    @include fluid-text(18, 32);
+    @include fluid-text(18, 30);
     line-height: 100%;
-    color: var(--color-white);
+    font-family: 'Playfair', sans-serif;
 }
-
+.text {
+    @include fluid-text(14, 16);
+}
+.link {
+    padding: 1rem 1.6rem;
+    background-color: var(--color-brow);
+    color: var(--color-white);
+    @include fluid-text(12, 14);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+.button-transparent {
+    .link {
+        background-color: var(--color-white);
+        color: var(--color-brow);
+        @include fluid-text(14, 16);
+    }
+}
 /*----------------------------------global--------------------------------*/

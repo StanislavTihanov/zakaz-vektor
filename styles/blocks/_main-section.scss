@@ -1,0 +1,233 @@
+/*----------------------------------main-section--------------------------------*/
+.main-section--mod {
+    padding: 6rem 0rem 0rem 0rem; 
+    .title {
+        margin-bottom: 0rem;
+    }
+    @include mobile {
+        padding: 2rem 0rem 0rem 0rem;
+    }
+}
+.main-section {
+    margin-top: 4rem;
+    &__body {
+        position: relative;
+        padding: 6rem 0rem 4.8rem 0rem;
+        margin-bottom: 2rem;
+        &--mod {
+            padding: 21.5rem 0.5rem 3rem 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 1rem;
+            flex-wrap: wrap;
+            @include mobile {
+                padding: 10rem 0.5rem 3rem 0.5rem;
+            }
+            .main-section__lists .main-section__list {
+                margin: 0rem;
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
+                max-width: 77rem;
+                @include mobile {
+                    flex-wrap: wrap;
+                }
+            }
+            .main-section__list_box {
+                transform: translate(0%,150%);
+                opacity: 0;
+                transition: all 1s ease 0s;
+                text-align: start;
+                padding: 0.9rem 1.2rem;
+                width: 100%;
+                @include fluid-text(12, 14);
+                @include mobile {
+                    width: 100%;
+                }
+            }
+            .main-section__list_box._action {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+    }
+    &__info {
+        text-align: center;
+        max-width: 60rem;
+        margin: auto;
+    }
+    &__text {
+        padding-bottom: 3.5rem;
+        max-width: 30rem;
+        margin: auto;
+        @include desktop {
+            margin-top: 0rem;
+            padding-bottom: 2rem;
+        }
+    }
+    &__lists {
+        position: relative;
+        z-index: 9;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+        &:first-child {
+            margin: 0rem 8rem;
+            margin-bottom: 4rem;
+            @include table {
+                margin: 0rem 5rem;
+                margin-bottom: 4rem;
+            }
+            @include mobile {
+                margin-bottom: 1.5rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        &:nth-child(2) {
+            margin: 0rem 12rem;
+            margin-bottom: 20.5rem;
+            @include desktop {
+                margin-bottom: 15rem;
+            }
+            @include table {
+                margin: 0rem 5rem;
+                margin-bottom: 15rem;
+            }
+            @include mobile {
+                margin-bottom: 5rem;
+                justify-content: center;
+            }
+        }
+        &_box {
+            position: relative;
+            backdrop-filter: blur(40px);
+            background: rgba(72, 44, 12, 0.2);
+            border: 1px solid rgba(252, 250, 247, 0.43);
+            border-radius: 1px;
+            width: 20rem;
+            text-align: center;
+            padding: 0.7rem;
+            color: var(--color-white);
+            text-transform: uppercase;
+            @include fluid-text(12, 16);
+            @include desktop {
+                width: 17rem;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 7px;
+                top: 0.4rem;
+                left: 0.4rem;
+                border-radius: 50%;
+                background-color: var(--color-white);
+            }
+            &:first-child {
+                transform: translate(-50%, 0%);
+                opacity: 0;
+                transition: all 1s ease 0s;
+            }
+            &:first-child._action {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+            &:last-child {
+                transform: translate(50%, 0%);
+                opacity: 0;
+                transition: all 1s ease 0s;
+            }
+            &:last-child._action {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+        &_link {
+            left: 50%;
+            background-color: var(--color-white);
+            width: 20rem;
+            text-align: center;
+            padding: 0.7rem;
+            transform: translate(0%,150%);
+            opacity: 0;
+            transition: all 0.5s ease 0s;
+            margin: auto;
+            text-transform: uppercase;
+            @include hover {
+                color: var(--color-white);
+                background-color: var(--color-green);
+            }
+            @include desktop {
+                width: 15rem;
+                bottom: 2rem;
+            }
+        }
+        &_link._action {
+            transform: translate(0px, 0px);
+            opacity: 1;
+        }
+    }
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 1rem;
+        @include table {
+            flex-wrap: wrap;
+        }
+    }
+    &__block {
+        background-color: var(--color-green);
+        color: var(--color-white);
+        padding: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: 2px;
+        flex-basis: 40%;
+        @include table {
+            flex-basis: 47%;
+        }
+        @include mobile{
+            flex-basis: 100%;
+        }
+        .subtitle {
+            display: flex;
+            align-items: start;
+            gap: 1.3rem;
+            margin-bottom: 3.7rem;
+            @include mobile {
+                margin-bottom: 2rem;
+            }
+        }
+        &:first-child {
+            .subtitle {
+                h3::first-letter {
+                   font-size: 2.5rem;
+                }
+            }
+
+        }
+        .text {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+/*----------------------------------main-section--------------------------------*/

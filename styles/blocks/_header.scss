@@ -1,26 +1,26 @@
 /*----------------------------------header--------------------------------*/
 .header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-brow);
+    z-index: 999;
     &__body {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        padding: 10px 0px;
+        padding: 0.7rem 0rem;
     }
     &__logo {
         z-index: 3; 
+        @include desktop {
+           width: 9rem;
+        }
     }
-    &__links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        @include fluid-text(12, 16);
-    }
-    &__link {
-        @include hover {
-            color: var(--color-blue);
+    &__button {
+        @include table {
+            display: none;
         }
     }
 }

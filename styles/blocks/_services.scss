@@ -1,0 +1,35 @@
+/*----------------------------------services--------------------------------*/
+.services__block {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    @include mobile {
+        flex-wrap: wrap;
+    }
+    .consulting__link {
+        width: 50%;
+        @include mobile {
+            width: 100%;
+            display: flex;
+            margin-bottom: 0.7rem;
+            align-items: stretch;
+            padding-bottom: 0.7rem;
+            &_icon {
+                position: static;
+                flex: none;
+                width: 3.5rem;
+                text-align: center;
+            }
+            &_icon:last-child {
+                text-align: end;
+            }
+        }
+    }
+    .consulting__link:nth-child(even) .consulting__link_icon {
+        margin-left: 2rem;
+        @include mobile {
+            margin-left: 0rem;
+        }
+    }
+}
+/*----------------------------------services--------------------------------*/

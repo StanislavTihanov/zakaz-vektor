@@ -19,9 +19,10 @@
         align-items: center;
     }
     &__content {
-        max-width: 600px;
-        background-color: var(--color-white);
-        padding: 70px 66px 35px;
+        max-width: 43rem;
+        background-color: var(--color-green);
+        color: var(--color-white);
+        padding: 0rem 2rem 2rem 2rem;
         position: relative;
         opacity: 0;
         transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
@@ -44,13 +45,17 @@
         opacity: 1;
         visibility: visible;
     }
+    &__form {
+        .form {
+           display: block;
+           padding: 0rem;
+        }
+    }
     &__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 2.5rem;
-        color: red;
-        transform: rotate(45deg);
+        margin-bottom: 2rem;
+        padding: 2rem 0rem 2rem 2rem;
+        display: flex;
+        justify-content: end;
     }
   }
 

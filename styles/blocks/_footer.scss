@@ -1,10 +1,41 @@
 /*----------------------------------footer--------------------------------*/
 .footer {
-    padding: 1.5rem 0px;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    padding: 5rem 0rem 1.6rem;
+    &__form,
     &__body {
-        @include content-center;
-        gap: 10px;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #FCFAF7;
+        margin-bottom: 5rem;
+        @include mobile {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    &__body,
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem 20rem;
+        flex-wrap: wrap;
+        @include fluid-text(12, 16);
+        text-transform: uppercase;
+        line-height: 120%;
+    }
+    &__link {
+        margin-bottom: 1rem;
     }
 }
+
 
 /*----------------------------------footer--------------------------------*/
