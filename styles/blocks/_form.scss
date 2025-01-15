@@ -30,10 +30,41 @@
         font-size: 1rem;
         margin-bottom: 0.5rem;
     }
-    &__item,
-    &__inner {
-        width: 100%;
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem;
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
+    &__messengers {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    &__messenger {
+        backdrop-filter: blur(4px);
+        background: rgba(252, 250, 247, 0.2);
+        border: 1px solid rgba(252, 250, 247, 0.3);
+        border-radius: 2px;
+        padding: 1rem;
+        &:hover {
+            background: rgba(241, 240, 238, 0.5);
+        }
+    }
+    &__item {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include mobile {
+            margin-bottom: 0rem;
+        }
+    }
+    &__inner {
+        max-width:16rem;
+    }
+
     &__input {
         background-color: #fcfaf734;
         padding: 1rem 1.6rem;
@@ -76,7 +107,7 @@
         text-transform: uppercase;
         margin-bottom: 1rem;
     }
-    &__block {
+    &__body {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
@@ -128,9 +159,6 @@
             left: 4px;
             background-color: var(--color-white);
             transform: scale(0);
-        }
-        a {
-            display: inline-block;
         }
     }
 

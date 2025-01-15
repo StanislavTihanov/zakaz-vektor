@@ -30,29 +30,86 @@
             <img src="images/logo.svg" alt="logo">
           </a>
           <nav class="menu" id="menu">
-            <ul>
+            <ul class="menu__list">
               <li>
+                <a class="menu__link active__color " href="index.html">Главная</a>
+              </li>
+              <li class="menu__item">
                 <a class="menu__link" href="goz.html">Услуги по ГОЗ</a>
+                <div class="menu__arrow">
+                  <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.36603 7.5C4.98113 8.16667 4.01887 8.16667 3.63397 7.5L0.602886 2.25C0.217986 1.58333 0.699111 0.75 1.46891 0.75L7.53109 0.75C8.30089 0.75 8.78201 1.58333 8.39711 2.25L5.36603 7.5Z" fill="#A29381" />
+                  </svg>
+                </div>
+                <ul class="menu__sub-list">
+                  <li>
+                    <a href="#!">Формирование РКМ для ГОЗ</a>
+                  </li>
+                  <li>
+                    <a href="#!">Организация ведения раздельного учета по гособоронзаказу</a>
+                  </li>
+                  <li>
+                    <a href="#!">Комплексное ведение контрактов ГОЗ, Аутсорсинг</a>
+                  </li>
+                </ul>
               </li>
-              <li>
+              <li class="menu__item">
                 <a class="menu__link" href="services.html">Другие услуги</a>
+                <div class="menu__arrow">
+                  <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.36603 7.5C4.98113 8.16667 4.01887 8.16667 3.63397 7.5L0.602886 2.25C0.217986 1.58333 0.699111 0.75 1.46891 0.75L7.53109 0.75C8.30089 0.75 8.78201 1.58333 8.39711 2.25L5.36603 7.5Z" fill="#A29381" />
+                  </svg>
+                </div>
+                <ul class="menu__sub-list">
+                  <li>
+                    <a href="#!">Внутренний аудит вашего предприятия</a>
+                  </li>
+                  <li>
+                    <a href="#!">Индивидуальные и корпоративные программы обучения</a>
+                  </li>
+                  <li>
+                    <a href="#!">Бухгалтерский аутсорсинг компаний</a>
+                  </li>
+                  <li>
+                    <a href="#!">Юридическое сопровождение предприятий</a>
+                  </li>
+                </ul>
               </li>
-              <li>
+              <li class="menu__item">
                 <a class="menu__link" href="expertise.html">экспертизы</a>
+                <div class="menu__arrow">
+                  <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.36603 7.5C4.98113 8.16667 4.01887 8.16667 3.63397 7.5L0.602886 2.25C0.217986 1.58333 0.699111 0.75 1.46891 0.75L7.53109 0.75C8.30089 0.75 8.78201 1.58333 8.39711 2.25L5.36603 7.5Z" fill="#A29381" />
+                  </svg>
+                </div>
+                <ul class="menu__sub-list">
+                  <li>
+                    <a href="#!">Финансово-экономическая экспертиза</a>
+                  </li>
+                  <li>
+                    <a href="#!">Бухгалтерская экспертиза</a>
+                  </li>
+                  <li>
+                    <a href="#!">Бухгалтерский аутсорсинг компаний</a>
+                  </li>
+                  <li>
+                    <a href="#!">Рецензирование</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a class="menu__link" href="#footer">Контакты</a>
               </li>
               <li>
-                <a class="menu__link" href="tel:+777777777776">+7 (900) 000 00 00</a>
+                <a class="menu__link" href="tel:+79910076760">+7 991 007-67-60</a>
               </li>
             </ul>
             <div class="menu__button">
-              <a class="link popup-link" href="#popup">Получить консультацию</a>
+              <a class="link popup-link" href="#popup">Консультация</a>
             </div>
           </nav>
           <div class="header__button">
-            <a class="link popup-link" href="#popup">Получить консультацию</a>
+            <a class="link popup-link" href="#popup">Консультация</a>
           </div>
           <div class="burger__wrapper" aria-label="кнопка открытия меню">
             <div class="burger" id="hamb">
@@ -94,7 +151,12 @@
                   <p>Аудит</p>
                 </div>
               </div>
-              <a class="main-section__list_link _anim-items" href="goz.html">Выбрать услугу</a>
+              <div class="main-section__item _anim-items">
+                <div class="main-section__item_text">
+                  <p>Получите бесплатную консультацию эксперта</p>
+                </div>
+                <a class="main-section__item_link popup-link" href="#popup">Получить консультацию</a>
+              </div>
             </div>
             <div class="main-section__bg _ibg">
               <picture>
@@ -228,37 +290,42 @@
       <section class="advantages" id="advantages">
         <div class="advantages__content _container">
           <div class="title">
-            <h2>Преимущества <br> работы с «Вектор»</h1>
+            <h2>Преимущества работы с «Вектор»</h1>
           </div>
           <div class="advantages__body">
-            <div class="advantages__block">
-              <div class="subtitle">
-                <h3>Опытная команда</h3>
+            <div class="advantages__blocks">
+              <div class="advantages__block">
+                <div class="advantages__subtitle">
+                  <h3>Уникальные специалисты с опытом работы в сфере госзаказов</h3>
+                </div>
+                <div class="advantages__subtext">
+                  <p>Наша команда состоит <br> из экспертов,знающих все нюансы законодательства о гособоронзаказе <br> и госзакупках</p>
+                </div>
               </div>
-              <div class="text">
-                <p>Наша команда — эксперты в области госзакупок, бухгалтерского учёта и права</p>
+              <div class="advantages__block">
+                <div class="advantages__subtitle">
+                  <h3>Увеличение прибыли через оптимизацию расходов</h3>
+                </div>
+                <div class="advantages__subtext">
+                  <p>Наши решения направлены на повышение финансовой эффективности и минимизацию затрат в рамках госзаказов</p>
+                </div>
               </div>
-              <div class="advantages__block_lines">
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
+              <div class="advantages__block">
+                <div class="advantages__subtitle">
+                  <h3>Комплексный подход <br> к решению вопросов</h3>
+                </div>
+                <div class="advantages__subtext">
+                  <p>Предлагаем полное сопровождение <br> от анализа до реализации, учитывая <br> все нюансы вашей деятельности</p>
+                </div>
               </div>
-            </div>
-            <div class="advantages__block">
-              <div class="subtitle">
-                <h3>Минимизация рисков</h3>
-              </div>
-              <div class="text">
-                <p>Защита от ответственности в рамках ГОЗМы помогаем избежать административной и уголовной ответственности, обеспечивая защиту вашего бизнеса</p>
-              </div>
-              <div class="advantages__block_lines">
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
+              <div class="advantages__block">
+                <div class="advantages__subtitle">
+                  <h3>Минимизация рисков <br> и конфиденциальность</h3>
+                </div>
+                <div class="advantages__subtext">
+                  <p>Мы помогаем избежать административной <br> и уголовной ответственности, обеспечивая защиту вашего бизнеса в рамках ГОЗ. <br>
+                     На всех этапах сотрудничества <br> мы гарантируем защиту ваших данных <br> и информации</p>
+                </div>
               </div>
             </div>
             <div class="advantages__img">
@@ -266,51 +333,6 @@
                 <source media="(min-width: 1920px)" srcset="images/advantages-image@2x.webp">
                 <img src="images/advantages-image.webp" alt="image" loading="lazy">
               </picture>
-            </div>
-            <div class="advantages__block">
-              <div class="subtitle">
-                <h3>Увеличение прибыли через оптимизацию расходов</h3>
-              </div>
-              <div class="text">
-                <p>Наши решения направлены на повышение финансовой эффективности и минимизацию затрат в рамках госзаказов</p>
-              </div>
-              <div class="advantages__block_lines">
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-              </div>
-            </div>
-            <div class="advantages__block">
-              <div class="subtitle">
-                <h3>Комплексный подход к решению вопросов</h3>
-              </div>
-              <div class="text">
-                <p>Предлагаем полное сопровождение от анализа до реализации, учитывая все нюансы вашей деятельности</p>
-              </div>
-              <div class="advantages__block_lines">
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-              </div>
-            </div>
-            <div class="advantages__block">
-              <div class="subtitle">
-                <h3>Строгая конфиденциальность</h3>
-              </div>
-              <div class="text">
-                <p>На всех этапах сотрудничества мы гарантируем защиту ваших данных и информации, что критически важно в сфере гособоронзаказов</p>
-              </div>
-              <div class="advantages__block_lines">
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-                <span class="advantages__block_line"></span>
-              </div>
             </div>
           </div>
         </div>
@@ -454,21 +476,37 @@
           <form class="form" action="send.php" method="POST" enctype="multipart/form-data" id="form">
             <div class="form__description">
               <div class="form__title">
-                <h3>Для подбора подходящей услуги свяжитесь с нами любым удобным способом</h3>
+                <h3>Заявка на обратный звонок</h3>
               </div>
               <div class="form__text">
-                <p>Заполните форму и наш менеджер свяжется с вами для уточнения всех деталей</p>
+                <p>Оставьте свои данные и наш менеджер <br> свяжется с вами</p>
               </div>
             </div>
-            <div class="form__block">
-              <div class="form__item">
-                <input class="form__input _req" id="formName" type="text" name="name" placeholder="Ваше имя">
-                <span class="form__error">Заполните поле</span>
-               </div>
-               <div class="form__item">
-                <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="+ 7 (900) 000 00 00">
-                <span class="form__error">Заполните поле</span>
-               </div>
+            <div class="form__body">
+              <div class="form__block">
+                <div class="form__items">
+                  <div class="form__item">
+                    <input class="form__input _req" id="formName" type="text" name="name" placeholder="Ваше имя">
+                    <span class="form__error">Заполните поле</span>
+                   </div>
+                   <div class="form__item">
+                    <input class="form__input _req _number" id="formNumber" type="text" name="number" placeholder="+ 7 (900) 000 00 00">
+                    <span class="form__error">Заполните поле</span>
+                   </div>
+                </div>
+                <div class="form__messengers">
+                  <a class="form__messenger" href="#!">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M27.42 6.46244L23.6325 24.1937C23.35 25.4424 22.625 25.7237 21.5775 25.1599L15.8963 20.9699L13.115 23.6287C12.8338 23.9112 12.5513 24.1937 11.9063 24.1937L12.35 18.3499L22.9475 8.71994C23.39 8.27619 22.8263 8.11494 22.2625 8.47869L9.08626 16.7787L3.40376 15.0462C2.15501 14.6437 2.15501 13.7962 3.68626 13.2337L25.7675 4.64994C26.855 4.32744 27.7825 4.89244 27.42 6.46244Z" fill="#FCFAF7" />
+                    </svg>
+                  </a>
+                  <a class="form__messenger" href="#!">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.0012 2.5C21.905 2.5 27.5012 8.09625 27.5012 15C27.5012 21.9037 21.905 27.5 15.0012 27.5C12.7922 27.5038 10.622 26.9192 8.71374 25.8063L2.50624 27.5L4.19624 21.29C3.08244 19.3812 2.49737 17.21 2.50124 15C2.50124 8.09625 8.09749 2.5 15.0012 2.5ZM10.7412 9.125L10.4912 9.135C10.3296 9.14614 10.1717 9.18859 10.0262 9.26C9.89071 9.33689 9.76694 9.43287 9.65874 9.545C9.50874 9.68625 9.42374 9.80875 9.33249 9.9275C8.87014 10.5286 8.62121 11.2666 8.62499 12.025C8.62749 12.6375 8.78749 13.2338 9.03749 13.7913C9.54874 14.9187 10.39 16.1125 11.5 17.2188C11.7675 17.485 12.03 17.7525 12.3125 18.0013C13.6918 19.2155 15.3353 20.0912 17.1125 20.5588L17.8225 20.6675C18.0537 20.68 18.285 20.6625 18.5175 20.6512C18.8815 20.6321 19.2369 20.5335 19.5587 20.3625C19.7223 20.2779 19.882 20.1862 20.0375 20.0875C20.0375 20.0875 20.0904 20.0517 20.1937 19.975C20.3625 19.85 20.4662 19.7612 20.6062 19.615C20.7112 19.5067 20.7987 19.3808 20.8687 19.2375C20.9662 19.0338 21.0637 18.645 21.1037 18.3212C21.1337 18.0737 21.125 17.9388 21.1212 17.855C21.1162 17.7213 21.005 17.5825 20.8837 17.5238L20.1562 17.1975C20.1562 17.1975 19.0687 16.7238 18.4037 16.4213C18.3341 16.3909 18.2596 16.3736 18.1837 16.37C18.0982 16.3611 18.0117 16.3706 17.9302 16.398C17.8487 16.4254 17.774 16.47 17.7112 16.5287C17.705 16.5262 17.6212 16.5975 16.7175 17.6925C16.6656 17.7622 16.5942 17.8149 16.5122 17.8438C16.4303 17.8728 16.3416 17.8767 16.2575 17.855C16.176 17.8333 16.0962 17.8057 16.0187 17.7725C15.8637 17.7075 15.81 17.6825 15.7037 17.6375C14.9861 17.3249 14.3218 16.9018 13.735 16.3838C13.5775 16.2463 13.4312 16.0962 13.2812 15.9513C12.7895 15.4803 12.3609 14.9475 12.0062 14.3663L11.9325 14.2475C11.8803 14.1672 11.8375 14.0813 11.805 13.9913C11.7575 13.8075 11.8812 13.66 11.8812 13.66C11.8812 13.66 12.185 13.3275 12.3262 13.1475C12.4637 12.9725 12.58 12.8025 12.655 12.6813C12.8025 12.4438 12.8487 12.2 12.7712 12.0113C12.4212 11.1562 12.0596 10.3058 11.6862 9.46C11.6125 9.2925 11.3937 9.1725 11.195 9.14875C11.1275 9.14042 11.06 9.13375 10.9925 9.12875C10.8247 9.11912 10.6564 9.12079 10.4887 9.13375L10.7412 9.125Z" fill="#FCFAF7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
                <div class="form__inner">
                  <button class="form__button" type="submit">Отправить</button>
                  <div class="form__item">
@@ -494,12 +532,15 @@
             </a>
             <div class="footer__contacts">
               <div class="footer__link">
-                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                <a href="mailto:vektorconsalting@yandex.ru">vektorconsalting@yandex.ru</a>
               </div>
               <div class="footer__link">
-                <a href="tel:+79999999999">+7 (999) 999 99 99</a>
+                <a href="tel:+79910076760">+7 (991) 007-67-60</a>
               </div>
               <address>г. Санкт-Петербург, <br> ул Восстания, 32, офис 10</address>
+              <div class="footer__link">
+                <a href="index.html">перейти на главную</a>
+              </div>
             </div>
           </div>
           <nav class="footer__nav">

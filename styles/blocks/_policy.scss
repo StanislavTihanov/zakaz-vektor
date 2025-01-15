@@ -1,0 +1,20 @@
+/*----------------------------------policy--------------------------------*/
+.policy__title .title {
+    @include fluid-text(22, 30);
+    margin-bottom: 2rem;
+}
+.policy__subtitle {
+    @include fluid-text(18, 20);
+    margin-bottom: 1rem;
+}
+.policy__block {
+    margin-bottom: 1rem;
+}
+.policy__link {
+  display: inline;
+}
+.policy__list ul li {
+    @include fluid-text(14, 16);
+}
+
+/*----------------------------------policy--------------------------------*/

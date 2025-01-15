@@ -74,4 +74,24 @@ section {
         @include fluid-text(14, 16);
     }
 }
+.error {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.error {
+    .title {
+        @include fluid-text(100, 200);
+    }
+    .text {
+        @include fluid-text(20, 40);
+        margin-top: 5rem;
+    }
+    &__button {
+        margin: 2rem;
+        background-color: var(--color-brow);
+        color: var(--color-white);
+        padding: 1rem;
+        border-radius: 5px;
+    }
+}
 /*----------------------------------global--------------------------------*/

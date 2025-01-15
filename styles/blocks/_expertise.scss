@@ -1,0 +1,48 @@
+/*----------------------------------expertise--------------------------------*/
+.expertise {
+    margin-top: 6rem;
+    @include table {
+        margin-top: 3rem;
+    }
+    .title {
+        text-align: start;
+        margin-bottom: 0rem;
+    }
+    &__info {
+       display: flex;
+       justify-content: space-between;
+       align-items: end;
+       gap: 1rem;
+       margin-bottom: 2.5rem;
+       @include table {
+        flex-wrap: wrap;
+       }
+    }
+    &__text {
+        text-transform: uppercase;
+        flex-basis: 80rem;
+        font-weight: 600;
+        line-height: 120%;
+        @include fluid-text(12, 16);
+    }
+    &__img {
+        margin-bottom: 3.7rem;
+        img {
+            border-radius: 2px;
+        }
+    }
+    &__blocks {
+       display: grid;
+       grid-template-columns:repeat(auto-fit, minmax(262px, 1fr));
+       gap: 1rem 2.5rem;
+    }
+    &__block {
+        background: rgba(247, 225, 190, 0.2);
+        padding: 1.2rem;
+        .subtitle {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+/*----------------------------------expertise--------------------------------*/

@@ -2,74 +2,46 @@
 .advantages {
 
     &__body {
-        display: grid;
-        grid-template-columns:repeat(auto-fit, minmax(450px, 1fr));
-        gap: 1.9rem;
+        display: flex;
+        gap: 1.9rem 7rem;
+        @include desktop {
+            gap: 1.9rem 1rem;
+        }
+        @include table {
+            flex-wrap: wrap;
+        }
         @include mobile {
-            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr;
             gap: 1rem;
         }
     }
+    &__blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 3rem;
+        @include mobile {
+            grid-template-columns: 1fr;
+         }
+    }
     &__block {
-        background-color: var(--color-brow);
-        color: var(--color-white);
-        padding: 1.3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .subtitle {
-            margin-bottom: 2.5rem;
-        }
-        .text {
-            margin-bottom: 5rem;
-            @include mobile {
-                margin-bottom: 3rem;
-            }
-        }
-        &_line {
-            display: block;
-            height: 2px;
+        border-top: 1px solid rgba(72, 44, 12, 0.3);
+        width: 382px;
+        padding-top: 1.8rem;
+        @include table {
             width: 100%;
-            background-color: var(--color-white);
-            opacity: 0.1;
-            margin-bottom: 0.3rem;
-            & :nth-child(2) {
-                opacity: 1;
-            }
-        }
-        &:first-child {
-            .advantages__block_line:first-child {
-                opacity: 1;
-            }
-        }
-        &:nth-child(2) {
-            .advantages__block_line:nth-child(2) {
-                opacity: 1;
-            }
-        }
-        &:nth-child(4) {
-            .advantages__block_line:nth-child(3) {
-                opacity: 1;
-            }
-        }
-        &:nth-child(5) {
-            .advantages__block_line:nth-child(4) {
-                opacity: 1;
-            }
-        }
-        &:nth-child(6) {
-            .advantages__block_line:nth-child(5) {
-                opacity: 1;
-            }
         }
     }
-    &__img {
-        padding: 0rem;
-        height: 100%;
-        img {
-            width: 100%;
-            height: 100%;
-        }
+    &__subtitle {
+        font-family: "Playfair", sans-serif;
+        margin-bottom: 1.9rem;
+        line-height: 100%;
+        font-size: 1.9rem;
+        @include mobile {
+            font-size: 1.5rem;
+         }
+    }
+    &__text {
+        @include fluid-text(14, 16);
     }
 }
 /*----------------------------------advantages--------------------------------*/

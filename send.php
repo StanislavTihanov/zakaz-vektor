@@ -16,15 +16,15 @@ $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
 // От кого письмо
-$mail->setFrom('info@fls.duru', 'Заявка с моего сайта');
+$mail->setFrom('info@fls.duru', 'Заявка с сайта');
 // Кому отправить
 $mail->addAddress('stas89tihanov@gmail.com');
 // Тема письма
-$mail->Subject = 'Новая заявка на верстку сайта';
+$mail->Subject = 'Новая заявка';
 
 // Формируем текст для письма и Telegram
 $body = '<h1>Заявка сайта</h1>';
-$message = "<b>Новая заявка на верстку сайта</b>\n";
+$message = "<b>Новая заявка</b>\n";
 
 if (!empty($_POST['name'])) {
     $body .= '<p><strong>Имя:</strong> ' . htmlspecialchars($_POST['name']) . '</p>';
@@ -37,14 +37,6 @@ if (!empty($_POST['email'])) {
 if (!empty($_POST['number'])) {
     $body .= '<p><strong>Телефон:</strong> ' . htmlspecialchars($_POST['number']) . '</p>';
     $message .= "<b>Телефон:</b> " . htmlspecialchars($_POST['number']) . "\n";
-}
-if (!empty($_POST['deadlines'])) {
-    $body .= '<p><strong>Сроки:</strong> ' . htmlspecialchars($_POST['deadlines']) . '</p>';
-    $message .= "<b>Сроки:</b> " . htmlspecialchars($_POST['deadlines']) . "\n";
-}
-if (!empty($_POST['message'])) {
-    $body .= '<p><strong>Ссылка на макет:</strong> ' . htmlspecialchars($_POST['message']) . '</p>';
-    $message .= "<b>Ссылка на макет:</b> " . htmlspecialchars($_POST['message']) . "\n";
 }
 
 // Отправка письма через PHPMailer

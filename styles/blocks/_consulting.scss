@@ -1,5 +1,8 @@
 /*----------------------------------consulting--------------------------------*/
 .consulting {
+    &__list .consulting__link:last-child {
+    margin-bottom: 0rem;
+    }
     &__link {
         display: flex;
         justify-content: space-between;

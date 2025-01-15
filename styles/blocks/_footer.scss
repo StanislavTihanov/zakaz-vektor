@@ -3,6 +3,11 @@
     background-color: var(--color-green);
     color: var(--color-white);
     padding: 5rem 0rem 1.6rem;
+    &__form .form {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
     &__form,
     &__body {
         padding-bottom: 3rem;
@@ -34,7 +39,16 @@
     }
     &__link {
         margin-bottom: 1rem;
+        &:last-child {
+            margin-top: 1rem;
+        }
     }
+    &__contacts {
+        address {
+            line-height: 150%;
+        }
+    }
+    
 }
 
 

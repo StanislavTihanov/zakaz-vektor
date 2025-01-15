@@ -13,13 +13,44 @@ if(burgerMenu) {
     });
 }
 //------------------------------------------------------------------------закрытие меню при клике вне его
-document.addEventListener ('click', (e) => {
-  if (!burgerMenu.contains(e.target)) {
-    menuBody.classList.remove('_active');
-    burgerMenu.classList.remove('_active');
-  }
-})
+
 //------------------------------------------------------------------------закрытие меню при клике вне его
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuItems = document.querySelectorAll('.menu__item');
+
+  menuItems.forEach((item) => {
+    const subMenu = item.querySelector('.menu__sub-list');
+    const link = item.querySelector('.menu__link');
+
+    if (subMenu) {
+      // Обработка клика на сам элемент .menu__item
+      item.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('menu__link')) {
+          e.preventDefault();
+          item.classList.toggle('active');
+
+          // Закрываем другие открытые подменю
+          menuItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+        }
+      });
+
+      // Оставляем переход по ссылке .menu__link
+      link.addEventListener('click', function (e) {
+        e.stopPropagation(); // Не даем родителю обработать событие
+      });
+    }
+  });
+});
+
+
+
+
 
 //------------------------------------------------------------------------popup
 const popupLinks = document.querySelectorAll('.popup-link');
